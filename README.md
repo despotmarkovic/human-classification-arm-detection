@@ -1,11 +1,11 @@
 
 # Download and launch the project
 
-Developing a Computer Vision model that will get as an input a picture and output whether is there a person or not and whether the hands are above the head or not. 
+Developing a Computer Vision model that will get as an input a picture and output whether there is a person or not and whether the hands are above the head or not.
 
-Developing API to facilitate integration, enable innovation, increase automation and scalability.
+Developing API to facilitate integration, enable innovation, increase automation and scalability usnig Flask library. 
 
-Docker developing
+Dockerfile and docker image
 
 HTML simple front
 
@@ -26,14 +26,14 @@ git clone https://github.com/despotmarkovic/project.git
 
 3. Navigate from current directory to downloaded directory:
 ```bash
-cd project
+cd repository_name
 ```
 
-4. Depending on which operating system, download and intialize the appropriate Docker for your local machine:
+4. Depending on operating system, download and intialize the appropriate Docker for your local machine:
 
 Link: https://www.docker.com/products/docker-desktop/
 
-5. Build an docker image by running the next command in terminal/PowerShell:
+5. Build a docker image by running the next command in terminal/PowerShell:
 ```bash
 docker build -t image_name -f Dockerfile ./
 ```
@@ -51,7 +51,7 @@ Check which IP address to use to run the app:
 docker logs container_name
 ```
 
-7. Open some browser and insert the URL which is the output of previous command in the address bar.
+7. Open some browser and insert the URL which is the output of previous command in the address bar. Just change the last 4 digits(5000 which represent the port in the container) to 80 in this case.
 
 
 
@@ -59,6 +59,12 @@ docker logs container_name
 ## Testing using test_api.py script
 
 First 6 steps are the same as for the running of the script.
+
+Comment out next 2 lines of code in rest_api.py script before testing:
+```bash
+if('image' not in request.files.keys()) or (check_file(request.files['image'].filename) == False):
+        abort(400, 'Bad file type! Choose file with .png, .jpg or .jpeg extension! ') 
+```
 
 Open new terminal/PowerShell. Run the test.py script with pytest library:
 ```bash
