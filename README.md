@@ -23,12 +23,12 @@ To download and run the application, follow the steps.
 ```
 2. Download the content from the git repository:
 ```bash
-git clone https://github.com/despotmarkovic/human-presence-arm-detection.git
+git clone https://github.com/despotmarkovic/human-classification-arm-detection.git
 ```
 
 3. Navigate from current directory to downloaded directory:
 ```bash
-cd human-presence-arm-detection
+cd human-classification-arm-detection
 ```
 
 4. Depending on operating system, download and intialize the appropriate Docker for your local machine:
