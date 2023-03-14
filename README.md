@@ -9,6 +9,8 @@ Dockerfile and docker image
 
 HTML simple front
 
+Developed and tested on Windows 10
+
 
 
 ## Download and Run
@@ -21,12 +23,12 @@ To download and run the application, follow the steps.
 ```
 2. Download the content from the git repository:
 ```bash
-git clone https://github.com/despotmarkovic/project.git
+git clone https://github.com/despotmarkovic/human-presence-arm-detection.git
 ```
 
 3. Navigate from current directory to downloaded directory:
 ```bash
-cd repository_name
+cd human-presence-arm-detection
 ```
 
 4. Depending on operating system, download and intialize the appropriate Docker for your local machine:
