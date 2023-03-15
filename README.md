@@ -42,15 +42,11 @@ docker build -t image_name -f Dockerfile ./
 
 6. Run the Docker container by running the next command:
 ```bash
-docker run -d --name container_name -p 80:5000 image_name
+docker run -d --name container_name image_name
 ```
 Check if the container is running:
 ```bash
 docker ps
-```
-Check which IP address to use to run the app:
-```bash
-docker logs container_name
 ```
 
 
@@ -59,10 +55,13 @@ docker logs container_name
 
 ## Testing using test_api.py script
 
-Open new terminal/PowerShell. Run the test_api.py script with pytest library:
+Open new terminal/PowerShell. Run the next command to start an interactive shell session inside a running Docker container
+```bash
+docker exec -it container_name bash
+```
+
+Next, run the pytest library together with test_api.py script:
 ```bash
 pytest test_api.py
 ```
-
-In test_api.py script, you can change the path to the image or file you want to run the test with.
 
