@@ -7,7 +7,7 @@ Developing API to facilitate integration, enable innovation, increase automation
 
 Dockerfile and docker image
 
-HTML simple front
+Testing with pytest library
 
 Developed and tested on Windows 10
 
@@ -53,24 +53,15 @@ Check which IP address to use to run the app:
 docker logs container_name
 ```
 
-7. Open some browser and insert the URL which is the output of previous command in the address bar. Just change the last 4 digits(5000 which represent the port in the container) to 80 in this case.
 
 
 
 
 ## Testing using test_api.py script
 
-First 6 steps are the same as for the running of the script.
-
-Comment out next 2 lines of code in rest_api.py script before testing:
+Open new terminal/PowerShell. Run the test_api.py script with pytest library:
 ```bash
-if('image' not in request.files.keys()) or (check_file(request.files['image'].filename) == False):
-        abort(400, 'Bad file type! Choose file with .png, .jpg or .jpeg extension! ') 
-```
-
-Open new terminal/PowerShell. Run the test.py script with pytest library:
-```bash
-pytest test_apy.py
+pytest test_api.py
 ```
 
 In test_api.py script, you can change the path to the image or file you want to run the test with.
